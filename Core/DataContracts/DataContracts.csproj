@@ -7,8 +7,8 @@
     <ProjectGuid>{6A3EFB98-FF2D-4781-8AD0-E99FBAB94D8B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CFCommerce.Core.DataContracts</RootNamespace>
-    <AssemblyName>CFCommerce.Core.DataContracts</AssemblyName>
+    <RootNamespace>CFCommerce.Library.DataContracts</RootNamespace>
+    <AssemblyName>CFCommerce.Library.DataContracts</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
