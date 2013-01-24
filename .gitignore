@@ -29,4 +29,4 @@ _ReSharper*/
 $tf*/
 /*.dotCover
 *.DotSettings
-packages/
+packages/*
