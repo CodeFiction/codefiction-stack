@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{46F4FC6D-E37E-45AE-B803-FA2FD0762D1F}</ProjectGuid>
+    <ProjectGuid>{6B86C8AF-F138-46C5-B101-71E870D0EC05}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CfCommerce.Common.Exceptions</RootNamespace>
-    <AssemblyName>CfCommerce.Common.Exceptions</AssemblyName>
+    <RootNamespace>CfCommerce.Common.Utilities</RootNamespace>
+    <AssemblyName>CfCommerce.Common.Utilities</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,8 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseException.cs" />
-    <Compile Include="CoreLevelException.cs" />
+    <Compile Include="ReflectionUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
