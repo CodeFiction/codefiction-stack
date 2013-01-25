@@ -39,8 +39,8 @@ namespace CfCommerce.Library.Core.DependencyResolvers
 
         public IDependencyResolver Register(Type interfaceType, Type serviceType, InstanceMode mode = InstanceMode.Transient)
         {
-            ComponentRegistration<object> componentRegistration = Component.For(interfaceType).
-                ImplementedBy(serviceType);
+            ComponentRegistration<object> componentRegistration = Component.For(interfaceType).ImplementedBy(serviceType);
+
             if (mode == InstanceMode.Transient)
             {
                 componentRegistration = componentRegistration.LifestyleTransient();
