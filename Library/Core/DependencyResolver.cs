@@ -24,8 +24,6 @@ namespace CfCommerce.Library.Core
             get { return _current.Value; }
         }
 
-
-
         internal static class DependencyResolverSelector
         {
             public static IDependencyResolver GetResolver(DependencyResolvers resolver)
@@ -34,7 +32,6 @@ namespace CfCommerce.Library.Core
                 {
                     case DependencyResolvers.Castle:
                         return new CastleDependencyResolver();
-                        break;
                     case DependencyResolvers.Funq:
                         break;
                     case DependencyResolvers.NInject:
