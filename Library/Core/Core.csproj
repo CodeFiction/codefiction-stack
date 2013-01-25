@@ -65,6 +65,10 @@
       <Project>{46f4fc6d-e37e-45ae-b803-fa2fd0762d1f}</Project>
       <Name>Exceptions</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Common\Utilities\Utilities.csproj">
+      <Project>{6b86c8af-f138-46c5-b101-71e870d0ec05}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CoreContracts\CoreContracts.csproj">
       <Project>{c29db59b-feff-4cca-82c9-26c7d6ab4ca1}</Project>
       <Name>CoreContracts</Name>

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Reflection;
 using CFCommerce.Library.CoreContracts;
+using CfCommerce.Common.Utilities;
 
 namespace CfCommerce.Library.Core.Initializers
 {
@@ -39,6 +40,8 @@ namespace CfCommerce.Library.Core.Initializers
 
         protected virtual void OnAssembliesLoading(Assembly assembly)
         {
+            //var types = ReflectionUtils.FindImplementingTypesFromAssembly<IModule>(assembly);
+            
             //TODO: loads the IModule from assembly. (Or IInstaller)
         }
     }
