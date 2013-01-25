@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Reflection;
 using CFCommerce.Library.CoreContracts;
-using Castle.MicroKernel;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
-using Castle.Windsor.Installer;
 using IDependencyResolver = CFCommerce.Library.CoreContracts.IDependencyResolver;
 
 namespace CfCommerce.Library.Core.DependencyResolvers
