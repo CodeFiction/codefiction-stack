@@ -47,9 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Initializers\CommerceBootstrapper.cs" />
     <Compile Include="DependencyResolvers\CastleDependencyResolver.cs" />
     <Compile Include="DependencyResolver.cs" />
     <Compile Include="Exceptions\DependencyInjectionContainerNotDefinedException.cs" />
+    <Compile Include="Extensions\AssertExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\TaskExtensions.cs" />
+    <Compile Include="Initializers\Loaders\AllReferenceLoader.cs" />
+    <Compile Include="Initializers\Loaders\AssemblyLoader.cs" />
+    <Compile Include="Initializers\Loaders\BaseAssemblyLoader.cs" />
+    <Compile Include="Initializers\Loaders\SpesificAssemblies.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

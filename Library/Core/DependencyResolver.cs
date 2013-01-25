@@ -33,9 +33,7 @@ namespace CfCommerce.Library.Core
                     case DependencyResolvers.Castle:
                         return new CastleDependencyResolver();
                     case DependencyResolvers.Funq:
-                        break;
                     case DependencyResolvers.NInject:
-                        break;
                     case DependencyResolvers.Unity:
                         break;
                 }
