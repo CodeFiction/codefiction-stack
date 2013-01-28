@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 namespace System
 {
     //This class was copied from ServiceStack library. (Servicestack.net)
+    // TODO : Move to Utilities library
     public static class StringExtensions
     {
         private static readonly Regex RegexSplitCamelCase = new Regex("([A-Z]|[0-9]+)",

@@ -7,6 +7,7 @@ namespace System.Threading.Tasks
     /// <summary>
     /// Task extensions for 
     /// </summary>
+    // TODO : Move to Utilities library
     public static class TaskExtensions
     {
         private static readonly Task<object> emptyTask = GenerateTask<object>(null);
