@@ -62,10 +62,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\BaseHandlerData.cs" />
+    <Compile Include="Configuration\CfReplaceHandlerData.cs" />
+    <Compile Include="Configuration\CfWrapHandlerData.cs" />
+    <Compile Include="Configuration\ExceptionPolicy.cs" />
+    <Compile Include="Configuration\Policy.cs" />
+    <Compile Include="Configuration\ExceptionHandlingPolicyContainer.cs" />
     <Compile Include="ExceptionManager.cs" />
     <Compile Include="Configuration\ExceptionHandlingConfiguration.cs" />
     <Compile Include="Enums.cs" />
-    <Compile Include="ExceptionHandlingPolicy.cs" />
+    <Compile Include="Configuration\ExceptionHandlingPolicy.cs" />
     <Compile Include="Handlers\CfReplaceExceptionHandler.cs" />
     <Compile Include="Handlers\CfWrapExceptionHandler.cs" />
     <Compile Include="ICfExceptionHandler.cs" />
@@ -80,6 +86,10 @@
     <Folder Include="Formatters\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Configuration\Configuration.csproj">
+      <Project>{aa032b1e-87d4-45eb-95e3-3ad935c0d3ef}</Project>
+      <Name>Configuration</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Utilities\Utilities.csproj">
       <Project>{6b86c8af-f138-46c5-b101-71e870d0ec05}</Project>
       <Name>Utilities</Name>

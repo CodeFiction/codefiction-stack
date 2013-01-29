@@ -5,7 +5,7 @@ namespace CfCommerce.Common.ExceptionHandling
 {
     public interface ICfExceptionManager
     {
-        ICfExceptionManager Configure(IExceptionHandlingConfiguration configuration);
+        void Configure(IExceptionHandlingConfiguration configuration);
 
         bool HandleException(Exception exceptionToHandle, string policyName, out Exception exceptionToThrow);
 
