@@ -12,28 +12,28 @@ namespace CfCommerce.Common.ExceptionHandling.Managers
     {
         private Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionManager _exceptionManager;
 
-        public ICfExceptionManager Configure(IExceptionHandlingConfiguration configuration)
+        public void Configure(IExceptionHandlingConfiguration configuration)
         {
-            PolicyRegistration[] policyRegistrations = configuration.PolicyRegistrations;
+        //    Policy[] policy = configuration.Policies;
 
-            Dictionary<string, ExceptionPolicyImpl> policyEntries = new Dictionary<string, ExceptionPolicyImpl>();
+        //    Dictionary<string, ExceptionPolicyImpl> policyEntries = new Dictionary<string, ExceptionPolicyImpl>();
 
-            foreach (var policyRegistration in policyRegistrations)
-            {
-                ExceptionHandlingPolicyContainer container = policyRegistration.ExceptionHandlingPolicyContainer;
+        //    foreach (var policyRegistration in policy)
+        //    {
+        //        ExceptionHandlingPolicyContainer container = policyRegistration.ExceptionHandlingPolicyContainer;
 
-                policyEntries.Add(container.Name, new ExceptionPolicyImpl(container.Name,
-                                                                          container.ExceptionHandlingPolicies.Select(
-                                                                              policy => new ExceptionPolicyEntry(
-                                                                                  policy.ExceptionType,
-                                                                                  GetPostHandlingAction(policy.PostHandlingAction),
-                                                                                  policy.ExceptionHandlers.Select(o => o as IExceptionHandler)))));
+        //        policyEntries.Add(container.Name, new ExceptionPolicyImpl(container.Name,
+        //                                                                  container.ExceptionHandlingPolicies.Select(
+        //                                                                      policy => new ExceptionPolicyEntry(
+        //                                                                          policy.ExceptionType,
+        //                                                                          GetPostHandlingAction(policy.PostHandlingAction),
+        //                                                                          policy.ExceptionHandlers.Select(o => o as IExceptionHandler)))));
 
-            }
+        //    }
 
-            _exceptionManager = new ExceptionManagerImpl(policyEntries);
+        //    _exceptionManager = new ExceptionManagerImpl(policyEntries);
 
-            return this;
+        //    return this;
         }
 
         public bool HandleException(Exception exceptionToHandle, string policyName, out Exception exceptionToThrow)
