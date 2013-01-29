@@ -5,11 +5,11 @@ namespace CfCommerce.Common.ExceptionHandling.Configuration
 {
     internal class ExceptionHandlingPolicy
     {
-        private readonly IList<BaseHandlerData> _handlers;
+        private readonly IList<BaseHandlerData> _handlerData;
 
-        public IList<BaseHandlerData> ExceptionHandlers
+        public IList<BaseHandlerData> ExceptionHandlerData
         {
-            get { return _handlers; }
+            get { return _handlerData; }
         }
 
         public Type ExceptionType { get; set; }
@@ -21,12 +21,12 @@ namespace CfCommerce.Common.ExceptionHandling.Configuration
             ExceptionType = exceptionType;
             PostHandlingAction = handlingAction;
 
-            _handlers = new List<BaseHandlerData>();
+            _handlerData = new List<BaseHandlerData>();
         }
 
-        public void AddHandler(BaseHandlerData handler)
+        public void AddHandlerData(BaseHandlerData handler)
         {
-            ExceptionHandlers.Add(handler);
+            ExceptionHandlerData.Add(handler);
         }
     }
 }
