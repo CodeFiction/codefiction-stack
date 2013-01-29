@@ -18,7 +18,7 @@ namespace CfCommerce.Common.ExceptionHandling.Configuration
 
         internal void AddExceptionHandlerData(BaseHandlerData handler)
         {
-            _exceptionHandlingPolicy.AddHandler(handler);
+            _exceptionHandlingPolicy.AddHandlerData(handler);
         }
     }
 }
