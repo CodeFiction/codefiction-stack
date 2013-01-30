@@ -41,6 +41,8 @@
   <ItemGroup>
     <Compile Include="IAssemblyLoader.cs" />
     <Compile Include="IDependencyResolver.cs" />
+    <Compile Include="Plugins\IPlugin.cs" />
+    <Compile Include="Plugins\IPluginService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
