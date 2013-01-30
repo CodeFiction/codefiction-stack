@@ -54,6 +54,7 @@
     <Compile Include="Extensions\AssertExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\TaskExtensions.cs" />
+    <Compile Include="Initializers\DefaultPluginService.cs" />
     <Compile Include="Initializers\Loaders\AllReferenceLoader.cs" />
     <Compile Include="Initializers\Loaders\AssemblyLoader.cs" />
     <Compile Include="Initializers\Loaders\BaseAssemblyLoader.cs" />

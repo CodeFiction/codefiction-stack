@@ -19,7 +19,7 @@ namespace CfCommerce.Library.Core
         /// Gets the default dependency injection resolver.
         /// <remarks>Dependency injection containers are constructed with the DependencyResolverSelector.</remarks>
         /// </summary>
-        public static IDependencyResolver Current
+        internal static IDependencyResolver Current
         {
             get { return _current.Value; }
         }

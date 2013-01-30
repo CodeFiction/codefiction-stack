@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
@@ -8,7 +9,7 @@ namespace CfCommerce.Library.Core.Initializers.Loaders
     {
         public override IEnumerable<Assembly> LoadAssemblies()
         {
-            return Enumerable.Empty<Assembly>();
+            return AppDomain.CurrentDomain.GetAssemblies();
         }
     }
 }

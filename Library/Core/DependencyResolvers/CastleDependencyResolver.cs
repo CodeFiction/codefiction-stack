@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using CFCommerce.Library.CoreContracts;
 using Castle.MicroKernel.Registration;
@@ -37,7 +39,7 @@ namespace CfCommerce.Library.Core.DependencyResolvers
 
         public IDependencyResolver Register(Type interfaceType, Type serviceType, InstanceMode mode = InstanceMode.Transient)
         {
-            ComponentRegistration<object> componentRegistration = Component.For(interfaceType).ImplementedBy(serviceType);
+            var componentRegistration = Component.For(interfaceType).ImplementedBy(serviceType);
 
             if (mode == InstanceMode.Transient)
             {
@@ -61,6 +63,18 @@ namespace CfCommerce.Library.Core.DependencyResolvers
         {
             _container.Release(instance);
             return this;
+        }
+
+        public TType CreateInstanceOfType<TType>(Type type)
+        {
+            var constructors = type.GetConstructors();
+
+            //TODO: given type must have one constructor with parameters or without parameters.
+            return (TType)(from constructor in constructors
+                           let parameters = constructor.GetParameters()
+                           let parameterInstance =
+                               parameters.Select(parameterInfo => _container.Resolve(parameterInfo.ParameterType)).ToList()
+                           select constructor.Invoke(parameterInstance.ToArray())).FirstOrDefault();
         }
     }
 }

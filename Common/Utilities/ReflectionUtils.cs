@@ -10,7 +10,7 @@ namespace CfCommerce.Common.Utilities
         public static IEnumerable<Type> FindImplementingTypesFromAssembly<TType>(Assembly assembly)
         {
             var types = from type in assembly.GetTypes()
-                        where type.IsAssignableFrom(typeof(TType))
+                        where typeof(TType).IsAssignableFrom(type) && !type.IsInterface
                         select type;
             return types;
         }
