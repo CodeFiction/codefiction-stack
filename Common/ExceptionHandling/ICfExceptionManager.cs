@@ -1,7 +1,7 @@
 using System;
-using CfCommerce.Common.ExceptionHandling.Configuration;
+using CodeFiction.Stack.Common.ExceptionHandling.Configuration;
 
-namespace CfCommerce.Common.ExceptionHandling
+namespace CodeFiction.Stack.Common.ExceptionHandling
 {
     public interface ICfExceptionManager
     {

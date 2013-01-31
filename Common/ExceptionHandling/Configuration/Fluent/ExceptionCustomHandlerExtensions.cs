@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace CfCommerce.Common.ExceptionHandling.Configuration.Fluent
+namespace CodeFiction.Stack.Common.ExceptionHandling.Configuration.Fluent
 {
     public static class ExceptionCustomHandlerExtensions
     {

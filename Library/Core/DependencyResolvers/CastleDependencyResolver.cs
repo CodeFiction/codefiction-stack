@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using CFCommerce.Library.CoreContracts;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
-using IDependencyResolver = CFCommerce.Library.CoreContracts.IDependencyResolver;
+using CodeFiction.Stack.Library.CoreContracts;
 
-namespace CfCommerce.Library.Core.DependencyResolvers
+namespace CodeFiction.Stack.Library.Core.DependencyResolvers
 {
     internal class CastleDependencyResolver : IDependencyResolver
     {

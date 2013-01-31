@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 
-namespace CfCommerce.Common.Utilities
+namespace CodeFiction.Stack.Common.Utilities
 {
     public static class ReflectionUtils
     {

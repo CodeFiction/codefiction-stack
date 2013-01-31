@@ -1,11 +1,9 @@
-﻿using CFCommerce.Library.CoreContracts;
-using CFCommerce.Library.CoreContracts.Plugins;
-using CfCommerce.Library.Core;
-using CfCommerce.Library.Core.Initializers;
-using CfCommerce.Library.Core.Initializers.Loaders;
+﻿using CodeFiction.Stack.Library.Core.Initializers.Loaders;
+using CodeFiction.Stack.Library.CoreContracts;
+using CodeFiction.Stack.Library.CoreContracts.Plugins;
 using NUnit.Framework;
 
-namespace CoreSandbox
+namespace CodeFiction.Stack.Sandbox.CoreSandbox
 {
     public class TestPlugin : IPlugin
     {
@@ -51,7 +49,7 @@ namespace CoreSandbox
         [Test]
         public void Bootstrapper()
         {
-            CfCommerce.Library.Core.Initializers.Bootstrapper.Create()
+            CodeFiction.Stack.Library.Core.Initializers.Bootstrapper.Create()
                                 .RegisterComponent(resolver => resolver.Register<IData, Data>())
                                 .RegisterComponent(resolver => resolver.Register<ITest, Test>())
                                 .StartApplication(AssemblyLoader.AllLoader);

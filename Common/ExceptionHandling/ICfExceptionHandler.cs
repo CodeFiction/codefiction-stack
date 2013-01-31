@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CfCommerce.Common.ExceptionHandling
+namespace CodeFiction.Stack.Common.ExceptionHandling
 {
     public interface ICfExceptionHandler
     {

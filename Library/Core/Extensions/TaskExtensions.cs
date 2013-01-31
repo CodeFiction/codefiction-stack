@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Threading.Tasks;
 
-namespace System.Threading.Tasks
+namespace CodeFiction.Stack.Library.Core.Extensions
 {
     /// <summary>
     /// Task extensions for 

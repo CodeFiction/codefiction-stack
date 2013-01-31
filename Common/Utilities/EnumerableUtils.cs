@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Pandora.Utilities
+namespace CodeFiction.Stack.Common.Utilities
 {
     /// <summary>
     /// IEnumerable'dan türemiş collection işlemlerinde 

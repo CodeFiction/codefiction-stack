@@ -1,8 +1,9 @@
-﻿using System.Linq;
-using JetBrains.Annotations;
-using Pandora.Utilities;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using CodeFiction.Stack.Common.Utilities.Resharper;
 
-namespace System.Collections.Generic
+namespace CodeFiction.Stack.Common.Utilities.Extensions
 {
     public static class EnumerableExtensions
     {

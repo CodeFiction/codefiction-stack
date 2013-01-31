@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CfCommerce.Common.Utilities
+namespace CodeFiction.Stack.Common.Utilities
 {
     public static class CollectionUtils
     {

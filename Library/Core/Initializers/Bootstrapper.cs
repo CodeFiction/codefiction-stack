@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using CFCommerce.Library.CoreContracts;
-using CFCommerce.Library.CoreContracts.Plugins;
-using CfCommerce.Common.Utilities;
+using CodeFiction.Stack.Common.Utilities;
+using CodeFiction.Stack.Library.CoreContracts;
+using CodeFiction.Stack.Library.CoreContracts.Plugins;
 
-namespace CfCommerce.Library.Core.Initializers
+namespace CodeFiction.Stack.Library.Core.Initializers
 {
     /// <summary>
     /// Main bootstrapper that manages the lifecycle of the application.

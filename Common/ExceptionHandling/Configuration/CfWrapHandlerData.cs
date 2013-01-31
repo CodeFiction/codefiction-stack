@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CfCommerce.Common.ExceptionHandling.Configuration
+namespace CodeFiction.Stack.Common.ExceptionHandling.Configuration
 {
     internal class CfWrapHandlerData : BaseHandlerData
     {

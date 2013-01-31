@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace CfCommerce.Common.ExceptionHandling.Configuration
+namespace CodeFiction.Stack.Common.ExceptionHandling.Configuration
 {
     internal class ExceptionHandlingPolicyContainer
     {

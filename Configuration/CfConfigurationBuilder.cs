@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CfCommerce.Common.Configuration.Fluent;
+﻿using CodeFiction.Stack.Common.Configuration.Fluent;
 
-namespace CfCommerce.Common.Configuration
+namespace CodeFiction.Stack.Common.Configuration
 {
     public class CfConfigurationBuilder : ICfConfigurationBuilder 
     {

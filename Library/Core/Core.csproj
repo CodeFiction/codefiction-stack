@@ -7,8 +7,8 @@
     <ProjectGuid>{C845CF89-15B3-4C0B-87B2-2A5D08F905B3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CfCommerce.Library.Core</RootNamespace>
-    <AssemblyName>CfCommerce.Library.Core</AssemblyName>
+    <RootNamespace>CodeFiction.Stack.Library.Core</RootNamespace>
+    <AssemblyName>CodeFiction.Stack.Library.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
