@@ -1,4 +1,4 @@
-<Project DefaultTargets="CfCommerce" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="CodeFictionStack" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <NuGetExe Condition="$(NuGetExe) == ''">.\.nuget\nuget.exe</NuGetExe>
 	 <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
@@ -8,7 +8,7 @@
      <BuildInParallel Condition=" '$(BuildInParallel)' == '' ">false</BuildInParallel>
   </PropertyGroup>
    <ItemGroup>            
-        <SolutionsToBuild Include="cfcommerce.sln">
+        <SolutionsToBuild Include="CodeFiction.Stack.sln">
             <ReleaseRoot>.</ReleaseRoot>
             <BuildInParallel>$(BuildInParallel)</BuildInParallel>
         </SolutionsToBuild>    
@@ -34,7 +34,7 @@
             Targets="Build"
             Properties="Configuration=$(Configuration);CodeAnalysis=$(CodeAnalysis);StyleCopEnabled=$(StyleCopEnabled)" />
     </Target>
-  <Target Name="CfCommerce" DependsOnTargets="Build">
+  <Target Name="CodeFictionStack" DependsOnTargets="Build">
     
   </Target>
 </Project>

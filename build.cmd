@@ -10,12 +10,12 @@ mkdir bin
 :Build
 if "%1" == "" goto BuildDefaults
 
-%MsBuildPath%\msbuild.exe CfCommerce.msbuild /m /nr:false /t:%* /p:Platform="Any CPU" /v:M /fl /flp:LogFile=bin\msbuild.log;Verbosity=Normal
+%MsBuildPath%\msbuild.exe CodeFiction.Stack.msbuild /m /nr:false /t:%* /p:Platform="Any CPU" /v:M /fl /flp:LogFile=bin\msbuild.log;Verbosity=Normal
 if errorlevel 1 goto BuildFail
 goto BuildSuccess
 
 :BuildDefaults
-%MsBuildPath%\msbuild.exe CfCommerce.msbuild /m /nr:false /p:Platform="Any CPU" /v:M /fl /flp:LogFile=bin\msbuild.log;Verbosity=Normal
+%MsBuildPath%\msbuild.exe CodeFiction.Stack.msbuild /m /nr:false /p:Platform="Any CPU" /v:M /fl /flp:LogFile=bin\msbuild.log;Verbosity=Normal
 if errorlevel 1 goto BuildFail
 goto BuildSuccess
 
