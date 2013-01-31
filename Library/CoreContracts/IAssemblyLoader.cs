@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace CFCommerce.Library.CoreContracts
+namespace CodeFiction.Stack.Library.CoreContracts
 {
     public interface IAssemblyLoader : IDisposable
     {

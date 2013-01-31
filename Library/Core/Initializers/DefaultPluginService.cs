@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
-using CFCommerce.Library.CoreContracts.Plugins;
+using CodeFiction.Stack.Library.CoreContracts.Plugins;
 
-namespace CfCommerce.Library.Core.Initializers
+namespace CodeFiction.Stack.Library.Core.Initializers
 {
     internal class DefaultPluginService : IPluginService
     {

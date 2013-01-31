@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="CFCommerce.Presentation.WebUI.MvcApplication" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="CodeFiction.Stack.Presentation.WebUI.MvcApplication" Language="C#" %>

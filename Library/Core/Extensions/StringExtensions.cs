@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text.RegularExpressions;
 
-namespace System
+namespace CodeFiction.Stack.Library.Core.Extensions
 {
     //This class was copied from ServiceStack library. (Servicestack.net)
     // TODO : Move to Utilities library

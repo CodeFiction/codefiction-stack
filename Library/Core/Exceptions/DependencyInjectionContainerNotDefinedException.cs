@@ -1,7 +1,7 @@
 ﻿using System;
-using CfCommerce.Common.Exceptions;
+using CodeFiction.Stack.Common.Exceptions;
 
-namespace CfCommerce.Library.Core.Exceptions
+namespace CodeFiction.Stack.Library.Core.Exceptions
 {
     /// <summary>
     /// Represents the dependency injection container is not defined.

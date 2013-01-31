@@ -11,7 +11,7 @@ using System;
 using System.Runtime.Serialization;
 using System.Security.Permissions;
 
-namespace CfCommerce.Common.Exceptions
+namespace CodeFiction.Stack.Common.Exceptions
 {
     [Serializable]
     public abstract class BaseException : Exception

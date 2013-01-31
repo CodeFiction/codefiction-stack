@@ -1,4 +1,4 @@
-﻿namespace CFCommerce.Library.CoreContracts.Plugins
+﻿namespace CodeFiction.Stack.Library.CoreContracts.Plugins
 {
     /// <summary>
     /// Represents the interface for application plugins.

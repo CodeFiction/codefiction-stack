@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
 
-namespace BackendUI
+namespace CodeFiction.Stack.Presentation.BackendUI.App_Start
 {
     public static class WebApiConfig
     {

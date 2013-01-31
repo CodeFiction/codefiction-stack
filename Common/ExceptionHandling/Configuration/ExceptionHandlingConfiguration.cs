@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
-using CfCommerce.Common.ExceptionHandling.Configuration.Fluent;
+using CodeFiction.Stack.Common.ExceptionHandling.Configuration.Fluent;
 
-namespace CfCommerce.Common.ExceptionHandling.Configuration
+namespace CodeFiction.Stack.Common.ExceptionHandling.Configuration
 {
     public class ExceptionHandlingConfiguration : IExceptionHandlingConfiguration
     {

@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
-using CFCommerce.Library.CoreContracts;
+using CodeFiction.Stack.Library.CoreContracts;
 
-namespace CfCommerce.Library.Core.Initializers.Loaders
+namespace CodeFiction.Stack.Library.Core.Initializers.Loaders
 {
     /// <summary>
     /// Helper class for creating an assembly loader.

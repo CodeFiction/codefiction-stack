@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 /*
  * Copyright 2007-2012 JetBrains s.r.o.
  *
@@ -19,9 +15,7 @@ using System.Text;
  * limitations under the License.
  */
 
-using System;
-
-namespace JetBrains.Annotations
+namespace CodeFiction.Stack.Common.Utilities.Resharper
 {
     /// <summary>
     /// Indicates that marked element should be localized or not.

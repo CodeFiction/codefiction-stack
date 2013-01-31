@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Practices.EnterpriseLibrary.ExceptionHandling;
 
-namespace CfCommerce.Common.ExceptionHandling.Handlers
+namespace CodeFiction.Stack.Common.ExceptionHandling.Handlers
 {
     internal class CfWrapExceptionHandler : ICfExceptionHandler, IExceptionHandler
     {

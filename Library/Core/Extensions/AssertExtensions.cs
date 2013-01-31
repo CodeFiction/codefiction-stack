@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace System
+namespace CodeFiction.Stack.Library.Core.Extensions
 {
     //This class was copied from ServiceStack library. (Servicestack.net)
 

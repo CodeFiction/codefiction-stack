@@ -7,8 +7,8 @@
     <ProjectGuid>{515F598F-5A4F-46F3-A79D-EAD79B3F7652}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CfCommerce.Common.ExceptionHandling.Logging</RootNamespace>
-    <AssemblyName>CfCommerce.Common.ExceptionHandling.Logging</AssemblyName>
+    <RootNamespace>CodeFiction.Stack.Common.ExceptionHandling.Logging</RootNamespace>
+    <AssemblyName>CodeFiction.Stack.Common.ExceptionHandling.Logging</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

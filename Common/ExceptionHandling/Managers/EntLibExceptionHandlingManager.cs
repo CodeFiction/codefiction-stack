@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
-using System.Runtime.Serialization;
-using CfCommerce.Common.ExceptionHandling.Configuration;
-using CfCommerce.Common.ExceptionHandling.Handlers;
-using Microsoft.Practices.EnterpriseLibrary.Common.Configuration;
+using CodeFiction.Stack.Common.ExceptionHandling.Configuration;
+using CodeFiction.Stack.Common.ExceptionHandling.Handlers;
 using Microsoft.Practices.EnterpriseLibrary.ExceptionHandling;
 
-namespace CfCommerce.Common.ExceptionHandling.Managers
+namespace CodeFiction.Stack.Common.ExceptionHandling.Managers
 {
     public class EntLibExceptionHandlingManager : ICfExceptionManager
     {

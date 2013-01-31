@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Reflection;
 
-namespace CfCommerce.Library.Core.Initializers.Loaders
+namespace CodeFiction.Stack.Library.Core.Initializers.Loaders
 {
     internal class SpesificAssemblies : BaseAssemblyLoader
     {

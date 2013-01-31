@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CFCommerce.Library.CoreContracts.Plugins
+namespace CodeFiction.Stack.Library.CoreContracts.Plugins
 {
     public interface IPluginService
     {

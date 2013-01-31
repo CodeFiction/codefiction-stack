@@ -1,7 +1,4 @@
-﻿using CfCommerce.Common.Utilities;
-using Pandora.Utilities;
-
-namespace System
+﻿namespace CodeFiction.Stack.Common.Utilities.Extensions
 {
     public static class ArrayExtensions
     {

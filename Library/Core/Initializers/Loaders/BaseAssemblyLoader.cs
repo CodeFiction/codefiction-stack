@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using CFCommerce.Library.CoreContracts;
+using CodeFiction.Stack.Library.CoreContracts;
 
-namespace CfCommerce.Library.Core.Initializers.Loaders
+namespace CodeFiction.Stack.Library.Core.Initializers.Loaders
 {
     internal abstract class BaseAssemblyLoader : IAssemblyLoader
     {

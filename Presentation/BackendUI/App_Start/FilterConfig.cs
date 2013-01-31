@@ -1,7 +1,6 @@
-﻿using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
-namespace BackendUI
+namespace CodeFiction.Stack.Presentation.BackendUI.App_Start
 {
     public class FilterConfig
     {

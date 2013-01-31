@@ -1,6 +1,7 @@
 using System;
+using CodeFiction.Stack.Common.Utilities.Extensions;
 
-namespace CfCommerce.Common.ExceptionHandling.Configuration.Fluent
+namespace CodeFiction.Stack.Common.ExceptionHandling.Configuration.Fluent
 {
     public class ExceptionPolicyBuilder : 
         IPolicyRegistration, 

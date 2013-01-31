@@ -1,7 +1,6 @@
-﻿using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
-namespace WebUI
+namespace CodeFiction.Stack.Presentation.WebUI.App_Start
 {
     public class FilterConfig
     {

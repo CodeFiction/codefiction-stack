@@ -7,8 +7,8 @@
     <ProjectGuid>{C29DB59B-FEFF-4CCA-82C9-26C7D6AB4CA1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CFCommerce.Library.CoreContracts</RootNamespace>
-    <AssemblyName>CFCommerce.Library.CoreContracts</AssemblyName>
+    <RootNamespace>CodeFiction.Stack.Library.CoreContracts</RootNamespace>
+    <AssemblyName>CodeFiction.Stack.Library.CoreContracts</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

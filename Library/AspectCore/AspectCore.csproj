@@ -7,8 +7,8 @@
     <ProjectGuid>{48B5532D-D920-490A-980A-6409466747D2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CfCommerce.Library.AspectCore</RootNamespace>
-    <AssemblyName>CfCommerce.Library.AspectCore</AssemblyName>
+    <RootNamespace>CodeFiction.Stack.Library.AspectCore</RootNamespace>
+    <AssemblyName>CodeFiction.Stack.Library.AspectCore</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

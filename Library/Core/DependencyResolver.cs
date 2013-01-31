@@ -1,10 +1,9 @@
-﻿using CFCommerce.Library.CoreContracts;
-using System;
-using CfCommerce.Library.Core.DependencyResolvers;
-using CfCommerce.Library.Core.Exceptions;
+﻿using System;
+using CodeFiction.Stack.Library.Core.DependencyResolvers;
+using CodeFiction.Stack.Library.Core.Exceptions;
+using CodeFiction.Stack.Library.CoreContracts;
 
-
-namespace CfCommerce.Library.Core
+namespace CodeFiction.Stack.Library.Core
 {
     /// <summary>
     /// Activates the default Dependency Resolver.

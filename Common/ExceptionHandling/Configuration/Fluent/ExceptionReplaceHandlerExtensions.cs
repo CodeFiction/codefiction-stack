@@ -1,7 +1,7 @@
 using System;
-using CfCommerce.Common.ExceptionHandling.Handlers;
+using CodeFiction.Stack.Common.ExceptionHandling.Handlers;
 
-namespace CfCommerce.Common.ExceptionHandling.Configuration.Fluent
+namespace CodeFiction.Stack.Common.ExceptionHandling.Configuration.Fluent
 {
     public static class ExceptionReplaceHandlerExtensions
     {

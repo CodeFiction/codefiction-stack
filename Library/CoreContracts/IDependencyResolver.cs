@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace CFCommerce.Library.CoreContracts
+namespace CodeFiction.Stack.Library.CoreContracts
 {
     /// <summary>
     /// Represents the instance mode for <see cref="IDependencyResolver"/>.

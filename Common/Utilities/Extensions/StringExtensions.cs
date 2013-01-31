@@ -1,6 +1,6 @@
-﻿using JetBrains.Annotations;
+﻿using CodeFiction.Stack.Common.Utilities.Resharper;
 
-namespace System
+namespace CodeFiction.Stack.Common.Utilities.Extensions
 {
     public static class StringExtensions
     {

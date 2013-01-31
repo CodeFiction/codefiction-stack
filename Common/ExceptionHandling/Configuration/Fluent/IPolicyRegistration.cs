@@ -1,6 +1,6 @@
-using CfCommerce.Common.Configuration.Fluent;
+using CodeFiction.Stack.Common.Configuration.Fluent;
 
-namespace CfCommerce.Common.ExceptionHandling.Configuration.Fluent
+namespace CodeFiction.Stack.Common.ExceptionHandling.Configuration.Fluent
 {
     public interface IPolicyRegistration : IFluentInterface
     {

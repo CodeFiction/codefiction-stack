@@ -7,8 +7,8 @@
     <ProjectGuid>{8B342FC0-DF86-4534-B01C-CE90C4C33FAA}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExceptionHandlingSandbox</RootNamespace>
-    <AssemblyName>ExceptionHandlingSandbox</AssemblyName>
+    <RootNamespace>CodeFiction.Stack.Sandbox.ExceptionHandlingSandbox</RootNamespace>
+    <AssemblyName>CodeFiction.Stack.Sandbox.ExceptionHandlingSandbox</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

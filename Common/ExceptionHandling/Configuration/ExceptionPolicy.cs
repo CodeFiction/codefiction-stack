@@ -1,6 +1,6 @@
 using System;
 
-namespace CfCommerce.Common.ExceptionHandling.Configuration
+namespace CodeFiction.Stack.Common.ExceptionHandling.Configuration
 {
     public class ExceptionPolicy
     {

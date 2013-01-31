@@ -7,8 +7,8 @@
     <ProjectGuid>{6B86C8AF-F138-46C5-B101-71E870D0EC05}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CfCommerce.Common.Utilities</RootNamespace>
-    <AssemblyName>CfCommerce.Common.Utilities</AssemblyName>
+    <RootNamespace>CodeFiction.Stack.Common.Utilities</RootNamespace>
+    <AssemblyName>CodeFiction.Stack.Common.Utilities</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
