@@ -1,2 +1,2 @@
-codefiction-core
+codefiction-stack
 ================
