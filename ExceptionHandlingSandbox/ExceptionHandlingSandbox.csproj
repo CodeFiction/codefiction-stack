@@ -56,9 +56,9 @@
       <Project>{af4711d4-1493-479a-9ce4-e1f50dd93879}</Project>
       <Name>ExceptionHandling</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Configuration\Configuration.csproj">
-      <Project>{AA032B1E-87D4-45EB-95E3-3AD935C0D3EF}</Project>
-      <Name>Configuration</Name>
+    <ProjectReference Include="..\Library\CoreContracts\CoreContracts.csproj">
+      <Project>{C29DB59B-FEFF-4CCA-82C9-26C7D6AB4CA1}</Project>
+      <Name>CoreContracts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

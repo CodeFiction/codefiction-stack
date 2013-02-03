@@ -44,13 +44,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\Configuration\Configuration.csproj">
+      <Project>{02755210-3A60-46BB-80F7-F8945B633561}</Project>
+      <Name>Configuration</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Library\CoreContracts\CoreContracts.csproj">
       <Project>{c29db59b-feff-4cca-82c9-26c7d6ab4ca1}</Project>
       <Name>CoreContracts</Name>

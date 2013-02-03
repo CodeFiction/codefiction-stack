@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AA032B1E-87D4-45EB-95E3-3AD935C0D3EF}</ProjectGuid>
+    <ProjectGuid>{02755210-3A60-46BB-80F7-F8945B633561}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CodeFiction.Stack.Common.Configuration</RootNamespace>
-    <AssemblyName>CodeFiction.Stack.Common.Configuration</AssemblyName>
+    <RootNamespace>CodeFiction.Common.Configuration</RootNamespace>
+    <AssemblyName>CodeFiction.Common.Configuration</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -24,7 +24,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -39,10 +39,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CfConfigurationBuilder.cs" />
-    <Compile Include="Fluent\ICfConfigurationBuilder.cs" />
-    <Compile Include="Fluent\IFluentInterface.cs" />
+    <Compile Include="Abstraction\IConfigurationHelper.cs" />
+    <Compile Include="Abstraction\IConfigurationInitializer.cs" />
+    <Compile Include="ConfigManager.cs" />
+    <Compile Include="ConfigurationLoader.cs" />
+    <Compile Include="Helpers\ConfigurationHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Providers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Library\CoreContracts\CoreContracts.csproj">
+      <Project>{C29DB59B-FEFF-4CCA-82C9-26C7D6AB4CA1}</Project>
+      <Name>CoreContracts</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,4 +1,4 @@
-using CodeFiction.Stack.Common.Configuration.Fluent;
+using CodeFiction.Stack.Library.CoreContracts;
 
 namespace CodeFiction.Stack.Common.ExceptionHandling.Configuration.Fluent
 {

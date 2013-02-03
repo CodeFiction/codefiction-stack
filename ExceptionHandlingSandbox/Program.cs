@@ -12,7 +12,7 @@ namespace CodeFiction.Stack.Sandbox.ExceptionHandlingSandbox
     {
         static void Main(string[] args)
         {
-           ExceptionHandlingConfiguration configuration = new ExceptionHandlingConfiguration();
+           var configuration = new ExceptionHandlingConfiguration();
 
            configuration.BuildPolicies()
                .AddPolicyWithName("Defualt")
