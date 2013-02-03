@@ -78,7 +78,7 @@ namespace CodeFiction.Stack.Common.ExceptionHandling.Managers
             throw new NotSupportedException(String.Format("Enterprise library post handling action not supported. Action : {0}", postHandlingAction));
         }
 
-        private IList<IExceptionHandler> BuildEntLibExceptionHandlers(IEnumerable<BaseHandlerData> data)
+        private IEnumerable<IExceptionHandler> BuildEntLibExceptionHandlers(IEnumerable<BaseHandlerData> data)
         {
             List<IExceptionHandler> exceptionHandlers = new List<IExceptionHandler>();
 
