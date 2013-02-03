@@ -52,7 +52,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Common\Configuration\Configuration.csproj">
@@ -62,6 +64,10 @@
     <ProjectReference Include="..\..\Common\ExceptionHandling\ExceptionHandling.csproj">
       <Project>{af4711d4-1493-479a-9ce4-e1f50dd93879}</Project>
       <Name>ExceptionHandling</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Library\CoreContracts\CoreContracts.csproj">
+      <Project>{c29db59b-feff-4cca-82c9-26c7d6ab4ca1}</Project>
+      <Name>CoreContracts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{02755210-3A60-46BB-80F7-F8945B633561}</ProjectGuid>
+    <ProjectGuid>{AA032B1E-87D4-45EB-95E3-3AD935C0D3EF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CodeFiction.Common.Configuration</RootNamespace>
