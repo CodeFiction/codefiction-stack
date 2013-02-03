@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using CodeFiction.Stack.Common.ExceptionHandling.Handlers;
 
 namespace CodeFiction.Stack.Common.ExceptionHandling.Configuration.Fluent
@@ -27,23 +28,19 @@ namespace CodeFiction.Stack.Common.ExceptionHandling.Configuration.Fluent
 
         private class ExceptionReplaceHandlerBuilder : ExceptionHandlerBuilderExtension, IExceptionReplaceHandlerRegistration
         {
-            private readonly CfReplaceHandlerData _handlerData;
+            private readonly CfHandlerData _handlerData;
 
             public ExceptionReplaceHandlerBuilder(IExceptionHandlerRegistration context, Type replaceExceptionType)
                 : base(context)
             {
-                _handlerData = new CfReplaceHandlerData()
-                    {
-                        ExceptionType = replaceExceptionType,
-                        HandlerType = typeof(CfReplaceExceptionHandler)
-                    };
+                _handlerData = new CfHandlerData {HandlerType = typeof(CfReplaceExceptionHandler), HandlerData = new Dictionary<string, object> {{"replaceExceptionType", replaceExceptionType}}};
 
                 CurrentExceptionPolicy.ExceptionHandlingPolicy.AddHandlerData(_handlerData);
             }
 
             public IExceptionHandlerRegistrationForPolicyAndHandler UsingMessage(string message)
             {
-                _handlerData.ExceptionMessage = message;
+                _handlerData.HandlerData.Add("message", message);
                 return this;
             }
         }

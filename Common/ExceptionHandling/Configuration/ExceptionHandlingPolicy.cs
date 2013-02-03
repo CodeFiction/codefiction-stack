@@ -5,9 +5,9 @@ namespace CodeFiction.Stack.Common.ExceptionHandling.Configuration
 {
     internal class ExceptionHandlingPolicy
     {
-        private readonly IList<BaseHandlerData> _handlerData;
+        private readonly IList<CfHandlerData> _handlerData;
 
-        public IList<BaseHandlerData> ExceptionHandlerData
+        public IList<CfHandlerData> ExceptionHandlerData
         {
             get { return _handlerData; }
         }
@@ -21,10 +21,10 @@ namespace CodeFiction.Stack.Common.ExceptionHandling.Configuration
             ExceptionType = exceptionType;
             PostHandlingAction = handlingAction;
 
-            _handlerData = new List<BaseHandlerData>();
+            _handlerData = new List<CfHandlerData>();
         }
 
-        public void AddHandlerData(BaseHandlerData handler)
+        public void AddHandlerData(CfHandlerData handler)
         {
             ExceptionHandlerData.Add(handler);
         }

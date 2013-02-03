@@ -62,7 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration\BaseHandlerData.cs" />
+    <Compile Include="Configuration\CfHandlerData.cs" />
     <Compile Include="Configuration\CfReplaceHandlerData.cs" />
     <Compile Include="Configuration\CfWrapHandlerData.cs" />
     <Compile Include="Configuration\Fluent\ExceptionHandlerBuilderExtension.cs" />
@@ -89,6 +89,7 @@
     <Compile Include="Configuration\ExceptionHandlingPolicy.cs" />
     <Compile Include="Handlers\CfReplaceExceptionHandler.cs" />
     <Compile Include="Handlers\CfWrapExceptionHandler.cs" />
+    <Compile Include="Handlers\EntLibExceptionHandlerAdapter.cs" />
     <Compile Include="ICfExceptionHandler.cs" />
     <Compile Include="ICfExceptionManager.cs" />
     <Compile Include="Managers\EntLibExceptionHandlingManager.cs" />
@@ -101,7 +102,7 @@
     <Folder Include="Formatters\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Library\CoreContracts\CoreContracts.csproj">
+    <ProjectReference Include="..\Configuration\Configuration.csproj">
       <Project>{c29db59b-feff-4cca-82c9-26c7d6ab4ca1}</Project>
       <Name>CoreContracts</Name>
     </ProjectReference>

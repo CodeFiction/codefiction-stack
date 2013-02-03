@@ -41,7 +41,8 @@
   <ItemGroup>
     <Compile Include="IAssemblyLoader.cs" />
     <Compile Include="IDependencyResolver.cs" />
-    <Compile Include="IFluentInterface.cs" />
+ <Compile Include="IFluentInterface.cs" />
+  <Compile Include="IDynamicProxyProvider.cs" />
     <Compile Include="IInterceptor.cs" />
     <Compile Include="IMethodInvocation.cs" />
     <Compile Include="Plugins\IPlugin.cs" />

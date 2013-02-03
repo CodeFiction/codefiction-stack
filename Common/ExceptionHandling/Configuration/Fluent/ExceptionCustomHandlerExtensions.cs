@@ -42,7 +42,7 @@ namespace CodeFiction.Stack.Common.ExceptionHandling.Configuration.Fluent
                                                  Dictionary<string, object> parameters)
                 : base(context)
             {
-                BaseHandlerData baseHandlerData = new BaseHandlerData
+                CfHandlerData baseHandlerData = new CfHandlerData
                     {
                         HandlerType = customHandlerType, HandlerData = parameters
                     };    

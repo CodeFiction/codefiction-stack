@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using CodeFiction.Stack.Common.ExceptionHandling.Configuration;
 using CodeFiction.Stack.Common.ExceptionHandling.Handlers;
+using CodeFiction.Stack.Common.Utilities;
 using Microsoft.Practices.EnterpriseLibrary.ExceptionHandling;
 
 namespace CodeFiction.Stack.Common.ExceptionHandling.Managers
@@ -24,7 +26,7 @@ namespace CodeFiction.Stack.Common.ExceptionHandling.Managers
                 policyEntries.Add(container.Name,
                                   new ExceptionPolicyImpl(container.Name,
                                                           container.ExceptionHandlingPolicies.Select(
-                                                              handlingPolicy => 
+                                                              handlingPolicy =>
                                                                   new ExceptionPolicyEntry(handlingPolicy.ExceptionType,
                                                                                            GetPostHandlingAction(handlingPolicy.PostHandlingAction),
                                                                                            BuildEntLibExceptionHandlers(handlingPolicy.ExceptionHandlerData)))));
@@ -35,7 +37,7 @@ namespace CodeFiction.Stack.Common.ExceptionHandling.Managers
 
         public bool HandleException(Exception exceptionToHandle, string policyName, out Exception exceptionToThrow)
         {
-          return _exceptionManager.HandleException(exceptionToHandle, policyName, out exceptionToThrow);
+            return _exceptionManager.HandleException(exceptionToHandle, policyName, out exceptionToThrow);
         }
 
         public bool HandleException(Exception exceptionToHandle, string policyName)
@@ -50,7 +52,7 @@ namespace CodeFiction.Stack.Common.ExceptionHandling.Managers
 
         public TResult Process<TResult>(Func<TResult> action, TResult defaultResult, string policyName)
         {
-           return _exceptionManager.Process(action, defaultResult, policyName);
+            return _exceptionManager.Process(action, defaultResult, policyName);
         }
 
         public TResult Process<TResult>(Func<TResult> action, string policyName)
@@ -78,41 +80,24 @@ namespace CodeFiction.Stack.Common.ExceptionHandling.Managers
             throw new NotSupportedException(String.Format("Enterprise library post handling action not supported. Action : {0}", postHandlingAction));
         }
 
-        private IList<IExceptionHandler> BuildEntLibExceptionHandlers(IEnumerable<BaseHandlerData> data)
+        private IEnumerable<IExceptionHandler> BuildEntLibExceptionHandlers(IEnumerable<CfHandlerData> data)
         {
             List<IExceptionHandler> exceptionHandlers = new List<IExceptionHandler>();
 
-            foreach (BaseHandlerData baseHandlerData in data)
+            foreach (CfHandlerData baseHandlerData in data)
             {
                 // TODO : Use Cache
 
-                if (baseHandlerData.HandlerType == typeof(CfWrapExceptionHandler))
+                if (typeof(ICfExceptionHandler).IsAssignableFrom(baseHandlerData.HandlerType))
                 {
-                    CfWrapHandlerData cfWrapHandlerData = baseHandlerData as CfWrapHandlerData;
-                    CfWrapExceptionHandler wrapExceptionHandler = new CfWrapExceptionHandler(cfWrapHandlerData.ExceptionMessage, cfWrapHandlerData.ExceptionType);
-                    exceptionHandlers.Add(wrapExceptionHandler);
-                    continue;
-                }
-
-                if (baseHandlerData.HandlerType == typeof(CfReplaceExceptionHandler))
-                {
-                    CfReplaceHandlerData cfReplaceHandlerData = baseHandlerData as CfReplaceHandlerData;
-                    CfReplaceExceptionHandler replaceExceptionHandler = new CfReplaceExceptionHandler(cfReplaceHandlerData.ExceptionMessage, cfReplaceHandlerData.ExceptionType);
-                    exceptionHandlers.Add(replaceExceptionHandler);
-                    continue;
-                }
-
-                if (typeof(IExceptionHandler).IsAssignableFrom(baseHandlerData.HandlerType))
-                {
-                    // TODO : Check constructors and parameter names
-
-                    IExceptionHandler exceptionHandler = Activator.CreateInstance(baseHandlerData.HandlerType, baseHandlerData.HandlerData.Select(pair => pair.Value).ToArray()) as IExceptionHandler;
-                    exceptionHandlers.Add(exceptionHandler);
+                    var handler = ReflectionUtils.CreateInstanceOfType<ICfExceptionHandler>(baseHandlerData.HandlerType, baseHandlerData.HandlerData);
+                    EntLibExceptionHandlerAdapter adapter = new EntLibExceptionHandlerAdapter(handler);
+                    exceptionHandlers.Add(adapter);
                     continue;
                 }
 
                 // TODO : throw library spesific exception
-                throw new InvalidOperationException(string.Format("Type must be derived from IExceptionHandler. Type : {0}",baseHandlerData.HandlerType.FullName));
+                throw new InvalidOperationException(string.Format("Type must be derived from IExceptionHandler. Type : {0}", baseHandlerData.HandlerType.FullName));
             }
 
             return exceptionHandlers;

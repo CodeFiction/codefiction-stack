@@ -16,7 +16,7 @@ namespace CodeFiction.Stack.Common.ExceptionHandling.Configuration
             _exceptionHandlingPolicy = new ExceptionHandlingPolicy(exceptionType, handlingAction);
         }
 
-        internal void AddExceptionHandlerData(BaseHandlerData handler)
+        internal void AddExceptionHandlerData(CfHandlerData handler)
         {
             _exceptionHandlingPolicy.AddHandlerData(handler);
         }
