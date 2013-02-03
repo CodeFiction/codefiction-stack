@@ -1,4 +1,6 @@
-﻿namespace CodeFiction.Stack.Common.Utilities.Extensions
+﻿using CodeFiction.Stack.Common.Utilities;
+
+namespace System
 {
     public static class ArrayExtensions
     {

@@ -21,23 +21,24 @@ namespace CodeFiction.Stack.Library.CoreContracts
         /// <summary>
         /// Registers the instance for given interface.
         /// </summary>
-        IDependencyResolver RegisterInstance<TInterface>(TInterface instance)
+        IDependencyResolver RegisterInstance<TInterface>(TInterface instance, params Type[] interceptors)
             where TInterface : class;
 
         /// <summary>
         /// Registers the instance for given type.
         /// </summary>
-        IDependencyResolver RegisterInstance(Type type, object instance);
+        IDependencyResolver RegisterInstance(Type type, object instance, params Type[] interceptors);
 
+        //TODO : Update documantation for interceptors parameter for both Register methods
         /// <summary>
         /// Registers the given <typeparam name="TService"></typeparam> for the type <typeparam name="TInterface"></typeparam> with the given instance mode.
         /// </summary>
-        IDependencyResolver Register<TInterface, TService>(InstanceMode mode = InstanceMode.Transient) where TService : TInterface;
+         IDependencyResolver Register<TInterface, TService>(InstanceMode mode = InstanceMode.Transient, params Type[] interceptors) where TService : TInterface;
 
         /// <summary>
         /// Registers the given <typeparam name="serviceType"></typeparam> for the type <param name="interfaceType"></typeparam> with the given instance mode.
         /// </summary>
-        IDependencyResolver Register(Type interfaceType, Type serviceType, InstanceMode mode = InstanceMode.Transient);
+        IDependencyResolver Register(Type interfaceType, Type serviceType, InstanceMode mode = InstanceMode.Transient, params Type[] interceptors);
 
         /// <summary>
         /// Resolves and injects properties and constructors if they are able.
@@ -60,6 +61,5 @@ namespace CodeFiction.Stack.Library.CoreContracts
         /// Creates the instance of the given type and injects the constructor parameters.
         /// </summary>
         TType CreateInstanceOfType<TType>(Type type);
-
     }
 }

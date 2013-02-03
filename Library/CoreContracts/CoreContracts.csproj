@@ -41,9 +41,17 @@
   <ItemGroup>
     <Compile Include="IAssemblyLoader.cs" />
     <Compile Include="IDependencyResolver.cs" />
+    <Compile Include="IInterceptor.cs" />
+    <Compile Include="IMethodInvocation.cs" />
     <Compile Include="Plugins\IPlugin.cs" />
     <Compile Include="Plugins\IPluginService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Utilities\Utilities.csproj">
+      <Project>{6b86c8af-f138-46c5-b101-71e870d0ec05}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

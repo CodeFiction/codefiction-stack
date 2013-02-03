@@ -1,5 +1,4 @@
 using System;
-using CodeFiction.Stack.Common.Utilities.Extensions;
 
 namespace CodeFiction.Stack.Common.ExceptionHandling.Configuration.Fluent
 {

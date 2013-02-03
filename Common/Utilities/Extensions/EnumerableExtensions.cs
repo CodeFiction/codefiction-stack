@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using CodeFiction.Stack.Common.Utilities;
 using CodeFiction.Stack.Common.Utilities.Resharper;
 
-namespace CodeFiction.Stack.Common.Utilities.Extensions
+namespace System
 {
     public static class EnumerableExtensions
     {

@@ -1,6 +1,6 @@
 ﻿using CodeFiction.Stack.Common.Utilities.Resharper;
 
-namespace CodeFiction.Stack.Common.Utilities.Extensions
+namespace System
 {
     public static class StringExtensions
     {

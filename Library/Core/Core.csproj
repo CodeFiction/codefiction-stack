@@ -47,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Castle\CastleInterceptorAdapter.cs" />
+    <Compile Include="Castle\CastleInvocationAdapter.cs" />
+    <Compile Include="Exceptions\InvalidInterceptorException.cs" />
     <Compile Include="Initializers\Bootstrapper.cs" />
     <Compile Include="DependencyResolvers\CastleDependencyResolver.cs" />
     <Compile Include="DependencyResolver.cs" />

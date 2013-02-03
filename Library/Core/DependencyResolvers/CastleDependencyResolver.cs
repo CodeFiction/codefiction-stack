@@ -3,6 +3,8 @@ using System.Linq;
 using System.Reflection;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
+using CodeFiction.Stack.Library.Core.Exceptions;
+using CastleDynamicProxy = Castle.DynamicProxy;
 using CodeFiction.Stack.Library.CoreContracts;
 
 namespace CodeFiction.Stack.Library.Core.DependencyResolvers
@@ -17,25 +19,25 @@ namespace CodeFiction.Stack.Library.Core.DependencyResolvers
             return this;
         }
 
-        public IDependencyResolver RegisterInstance<TInterface>(TInterface instance)
+        public IDependencyResolver RegisterInstance<TInterface>(TInterface instance, params Type[] interceptors)
             where TInterface : class
         {
-            return RegisterInstance(typeof(TInterface), instance);
+            return RegisterInstance(typeof(TInterface), instance, interceptors);
         }
 
-        public IDependencyResolver RegisterInstance(Type type, object instance)
+        public IDependencyResolver RegisterInstance(Type type, object instance, params Type[] interceptors)
         {
-            _container.Register(Component.For(type).Instance(instance));
+            _container.Register(Component.For(type).Instance(instance).Interceptors(interceptors));
             return this;
         }
 
-        public IDependencyResolver Register<TInterface, TService>(InstanceMode mode = InstanceMode.Transient)
+        public IDependencyResolver Register<TInterface, TService>(InstanceMode mode = InstanceMode.Transient, params Type[] interceptors) 
             where TService : TInterface
         {
-            return Register(typeof(TInterface), typeof(TService), mode);
+            return Register(typeof(TInterface), typeof(TService), mode, interceptors);
         }
 
-        public IDependencyResolver Register(Type interfaceType, Type serviceType, InstanceMode mode = InstanceMode.Transient)
+        public IDependencyResolver Register(Type interfaceType, Type serviceType, InstanceMode mode = InstanceMode.Transient, params Type[] interceptors)
         {
             var componentRegistration = Component.For(interfaceType).ImplementedBy(serviceType);
 
@@ -43,6 +45,20 @@ namespace CodeFiction.Stack.Library.Core.DependencyResolvers
             {
                 componentRegistration = componentRegistration.LifestyleTransient();
             }
+
+            if (!interceptors.IsNullOrEmpty())
+            {
+                bool valid = interceptors.All(type => typeof (CastleDynamicProxy.IInterceptor).IsAssignableFrom(type));
+
+                if (!valid)
+                {
+                    string interceptorMessage = interceptors.Where(type => !typeof (CastleDynamicProxy.IInterceptor).IsAssignableFrom(type)).Select(type => type.FullName).ToList().JoinToString(",");
+                    throw new InvalidInterceptorException(string.Format("Following interceptors is Invalid: \n {0}", interceptorMessage));
+                }
+
+                componentRegistration.Interceptors(interceptors);
+            }
+
             _container.Register(componentRegistration);
             return this;
         }
