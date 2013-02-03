@@ -1,3 +1,3 @@
 codefiction-stack
 ================
-Stack
+Stack.
