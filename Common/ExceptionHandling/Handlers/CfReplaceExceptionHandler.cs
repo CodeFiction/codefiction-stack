@@ -3,7 +3,7 @@ using Microsoft.Practices.EnterpriseLibrary.ExceptionHandling;
 
 namespace CodeFiction.Stack.Common.ExceptionHandling.Handlers
 {
-    public class CfReplaceExceptionHandler : ICfExceptionHandler, IExceptionHandler
+    public class CfReplaceExceptionHandler : ICfExceptionHandler
     {
         private readonly IExceptionHandler _replaceHandler;
 

@@ -12,21 +12,21 @@ namespace CodeFiction.Stack.Sandbox.ExceptionHandlingSandbox
     {
         static void Main(string[] args)
         {
-           ExceptionHandlingConfiguration configuration = new ExceptionHandlingConfiguration();
+            ExceptionHandlingConfiguration configuration = new ExceptionHandlingConfiguration();
 
-           configuration.BuildPolicies()
-               .AddPolicyWithName("Defualt")
-               .ForExceptionType<Exception>()
-               //.HandleCustom<ConsoleLoggerHandler>()
-                   .HandleCustom(typeof(ConsoleLoggerHandler), new Dictionary<string, object>() {{"Key","Hello World"} })
-                   .WrapWith<InvalidOperationException>()
-                       .UsingMessage("Hede")
-                   .ThenThrowNewException()
-                .ForExceptionType<CustomException>()
-                    .HandleCustom(typeof(ConsoleLoggerHandler), new Dictionary<string, object>() { { "Key", "Hello World" } })
-                    .ReplaceWith<CustomReplaceException>()
-                        .UsingMessage("Replaced")
-                    .ThenThrowNewException();
+            configuration.BuildPolicies()
+                .AddPolicyWithName("Defualt")
+                .ForExceptionType<Exception>()
+                //.HandleCustom<ConsoleLoggerHandler>()
+                    .HandleCustom(typeof(ConsoleLoggerHandler), new Dictionary<string, object>() { { "objects", new object[] { "Hello World" } } })
+                    .WrapWith<InvalidOperationException>()
+                        .UsingMessage("Hede")
+                    .ThenThrowNewException()
+                 .ForExceptionType<CustomException>()
+                     .HandleCustom(typeof(ConsoleLoggerHandler), new Dictionary<string, object>() { { "objects", new object[] { "Hello World" } } })
+                     .ReplaceWith<CustomReplaceException>()
+                         .UsingMessage("Replaced")
+                     .ThenThrowNewException();
 
             ICfExceptionManager cfExceptionManager = ExceptionManager.Current;
 
@@ -95,15 +95,15 @@ namespace CodeFiction.Stack.Sandbox.ExceptionHandlingSandbox
     public class CustomReplaceException : Exception
     {
         public CustomReplaceException(string message, Exception ex)
-            : base(message,ex)
+            : base(message, ex)
         {
-            
+
         }
 
         public CustomReplaceException(string message)
             : base(message)
         {
-            
+
         }
     }
 }

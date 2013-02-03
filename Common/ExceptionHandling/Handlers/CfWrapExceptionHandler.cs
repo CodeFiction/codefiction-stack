@@ -3,13 +3,13 @@ using Microsoft.Practices.EnterpriseLibrary.ExceptionHandling;
 
 namespace CodeFiction.Stack.Common.ExceptionHandling.Handlers
 {
-    internal class CfWrapExceptionHandler : ICfExceptionHandler, IExceptionHandler
+    internal class CfWrapExceptionHandler : ICfExceptionHandler
     {
         private readonly IExceptionHandler _wrapHandler;
 
-        public CfWrapExceptionHandler(string message, Type replaceExceptionType)
+        public CfWrapExceptionHandler(string message, Type wrapExceptionType)
         {
-            _wrapHandler = new WrapHandler(message, replaceExceptionType);
+            _wrapHandler = new WrapHandler(message, wrapExceptionType);
         }
 
         public Exception HandleException(Exception exception, Guid handlingInstanceId)
