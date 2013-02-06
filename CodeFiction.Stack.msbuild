@@ -24,9 +24,9 @@
         <MSBuild Projects="@(RestoreCsProjFiles)" Targets="EnableRestore;RestorePackages" StopOnFirstFailure="true" />
         <MSBuild Projects=".nuget\nuget.targets" Targets="EnableRestore;RestoreBinaryDependencies" />
     </Target>
+	
 
     <Target Name="Build" DependsOnTargets="RestorePackages">
-        <!-- we need to batch the solution files since they both build Microsoft.TestCommon -->
         <MakeDir Directories="bin\%(SolutionsToBuild.ReleaseRoot)\$(Configuration)" />
         <MSBuild
             Projects="%(SolutionsToBuild.Identity)"
@@ -34,7 +34,12 @@
             Targets="Build"
             Properties="Configuration=$(Configuration);CodeAnalysis=$(CodeAnalysis);StyleCopEnabled=$(StyleCopEnabled)" />
     </Target>
-  <Target Name="CodeFictionStack" DependsOnTargets="Build">
+	<Target Name="UnitTest" DependsOnTargets="Build">
+          <Exec ContinueOnError='true' 
+                  Command='$(NUnitEXE) $(NUnitArgs) @(TestAssembly)'
+                  WorkingDirectory='%(WorkingDirectory)' />
+    </Target>
+  <Target Name="CodeFictionStack" DependsOnTargets="UnitTest">
     
   </Target>
 </Project>

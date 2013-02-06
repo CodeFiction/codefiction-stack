@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Web.Hosting;
+using CodeFiction.Stack.Library.Core.Extensions;
 
 namespace CfCommerce.Presentation.AspNetCore
 {

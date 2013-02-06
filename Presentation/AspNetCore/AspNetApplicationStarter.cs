@@ -1,8 +1,7 @@
 ﻿using System.Web;
-using CfCommerce.Library.Core;
-using CfCommerce.Library.Core.Initializers;
-using CfCommerce.Library.Core.Initializers.Loaders;
 using CfCommerce.Presentation.AspNetCore;
+using CodeFiction.Stack.Library.Core.Initializers;
+using CodeFiction.Stack.Library.Core.Initializers.Loaders;
 
 [assembly: PreApplicationStartMethod(typeof(AspNetApplicationStarter), "Start")]
 
@@ -20,7 +19,7 @@ namespace CfCommerce.Presentation.AspNetCore
         private static readonly ApplicationLifeManager LifeManager
             = new ApplicationLifeManager(OnApplicationShutdown, OnApplicationStart);
 
-        private static readonly CommerceBootstrapper Bootstrapper = new CommerceBootstrapper();
+        private static readonly Bootstrapper Bootstrapper = Bootstrapper.Create();
 
         /// <summary>
         /// Starts the application. This method executes by the <see cref="PreApplicationStartMethodAttribute"/>.
