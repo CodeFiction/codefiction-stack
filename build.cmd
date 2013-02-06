@@ -14,20 +14,21 @@ if "%1" == "" goto BuildDefaults
 if errorlevel 1 goto BuildFail
 goto BuildSuccess
 
-:BuildDefaults
-%MsBuildPath%\msbuild.exe CodeFiction.Stack.msbuild /m /nr:false /p:Platform="Any CPU" /v:M /fl /flp:LogFile=bin\msbuild.log;Verbosity=Normal
-if errorlevel 1 goto BuildFail
-goto BuildSuccess
+:BuildSuccess
+echo.
+echo **** BUILD SUCCESSFUL ***
+goto end
 
 :BuildFail
 echo.
 echo *** BUILD FAILED ***
 goto End
 
-:BuildSuccess
-echo.
-echo **** BUILD SUCCESSFUL ***
-goto end
+:BuildDefaults
+%MsBuildPath%\msbuild.exe CodeFiction.Stack.msbuild /m /nr:false /p:Platform="Any CPU" /v:M /fl /flp:LogFile=bin\msbuild.log;Verbosity=Normal
+if errorlevel 1 goto BuildFail
+goto BuildSuccess
+
 
 :End
 popd
