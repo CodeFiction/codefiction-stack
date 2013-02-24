@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="ArrayUtils.cs" />
     <Compile Include="CollectionUtils.cs" />
+    <Compile Include="DelegateUtils.cs" />
     <Compile Include="EnumerableUtils.cs" />
     <Compile Include="Extensions\ArrayExtensions.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />

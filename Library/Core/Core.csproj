@@ -47,9 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aspect\Attributes\AspectAttributeBase.cs" />
+    <Compile Include="Aspect\Attributes\WorksAfterAttribute.cs" />
+    <Compile Include="Aspect\Attributes\WorksBeforeAttribute.cs" />
+    <Compile Include="Aspect\Attributes\WorksOnExceptionAttribute.cs" />
+    <Compile Include="Aspect\MethodInvocationContext.cs" />
+    <Compile Include="Castle\Common\AttributeContext.cs" />
+    <Compile Include="Castle\Common\AttributesHelper.cs" />
     <Compile Include="Castle\CastleDynamicProxyProvider.cs" />
     <Compile Include="Castle\CastleInterceptorAdapter.cs" />
     <Compile Include="Castle\CastleInvocationAdapter.cs" />
+    <Compile Include="Castle\StrategyInterceptor.cs" />
     <Compile Include="Exceptions\InvalidInterceptorException.cs" />
     <Compile Include="Initializers\Bootstrapper.cs" />
     <Compile Include="DependencyResolvers\CastleDependencyResolver.cs" />

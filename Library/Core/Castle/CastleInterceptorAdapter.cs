@@ -15,8 +15,7 @@ namespace CodeFiction.Stack.Library.Core.Castle
         }
 
         public void Intercept(CastleDynamicProxy.IInvocation invocation)
-        {
-            
+        {           
             invocation.ReturnValue = _interceptor.Intercept(new CastleInvocationAdapter(invocation, _target));
         }
     }
