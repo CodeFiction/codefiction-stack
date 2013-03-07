@@ -12,6 +12,7 @@ namespace Common.Tests.Configuration
         {
             public string ConnectionFoo { get; set; }
             public string BarValue { get; set; }
+
         }
 
         [Test]
