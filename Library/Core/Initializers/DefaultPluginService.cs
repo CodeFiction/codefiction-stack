@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Collections.Generic;
@@ -17,7 +17,7 @@ namespace CodeFiction.Stack.Library.Core.Initializers
             {
                 try
                 {
-                    var plugin = DependencyResolver.Current.CreateInstanceOfType<IPlugin>(pluginType);
+                    var plugin = DependencyResolverActivator.Current.CreateInstanceOfType<IPlugin>(pluginType);
                     _plugins[plugin.Name] = plugin;
                 }
                 catch (Exception ex)
