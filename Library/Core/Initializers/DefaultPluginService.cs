@@ -1,6 +1,8 @@
-﻿using System;
+using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Collections.Generic;
+using CodeFiction.Stack.Library.Core.Extensions;
 using CodeFiction.Stack.Library.CoreContracts.Plugins;
 
 namespace CodeFiction.Stack.Library.Core.Initializers
@@ -11,9 +13,17 @@ namespace CodeFiction.Stack.Library.Core.Initializers
 
         public void Store(IEnumerable<Type> pluginTypes)
         {
-            foreach (IPlugin plugin in pluginTypes.Select(pluginType => DependencyResolverActivator.Current.CreateInstanceOfType<IPlugin>(pluginType)))
+            foreach (var pluginType in pluginTypes)
             {
-                _plugins[plugin.Name] = plugin;
+                try
+                {
+                    var plugin = DependencyResolver.Current.CreateInstanceOfType<IPlugin>(pluginType);
+                    _plugins[plugin.Name] = plugin;
+                }
+                catch (Exception ex)
+                {
+                    Debug.Write("'{0}' plugin cannot be constructed for following reason \r\n'{1}'.".FormatText(pluginType.FullName, ex.Message));
+                }
             }
         }
     }
