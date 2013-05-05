@@ -22,9 +22,11 @@ namespace CodeFiction.Stack.Library.Core.Initializers
         /// </summary>
         protected Bootstrapper()
         {
-            _resolver = DependencyResolver.Current;
+            _resolver = DependencyResolverActivator.Current;
             _pluginService = new DefaultPluginService();
         }
+
+        public IDependencyResolver DependencyResolver { get { return _resolver; } }
 
         public static Bootstrapper Create()
         {
@@ -51,7 +53,7 @@ namespace CodeFiction.Stack.Library.Core.Initializers
 
         public Bootstrapper RegisterComponent(Action<IDependencyResolver> dependencyAction)
         {
-            dependencyAction(DependencyResolver.Current);
+            dependencyAction(DependencyResolverActivator.Current);
             return this;
         }
 

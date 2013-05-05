@@ -16,8 +16,7 @@ namespace CfCommerce.Presentation.AspNetCore
         private static bool _applicationInitialized;
         private static readonly object SyncRoot = new object();
 
-        private static readonly ApplicationLifeManager LifeManager
-            = new ApplicationLifeManager(OnApplicationShutdown, OnApplicationStart);
+        private static readonly ApplicationLifeManager LifeManager = new ApplicationLifeManager(OnApplicationShutdown, OnApplicationStart);
 
         private static readonly Bootstrapper Bootstrapper = Bootstrapper.Create();
 

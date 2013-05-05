@@ -6,7 +6,11 @@ namespace CodeFiction.Stack.Library.CoreContracts
     /// <summary>
     /// Represents the instance mode for <see cref="IDependencyResolver"/>.
     /// </summary>
-    public enum InstanceMode { Singleton, Transient }
+    public enum InstanceMode
+    {
+        Singleton,
+        Transient
+    }
 
     /// <summary>
     /// Represents the dependency injection container interface.
@@ -21,24 +25,24 @@ namespace CodeFiction.Stack.Library.CoreContracts
         /// <summary>
         /// Registers the instance for given interface.
         /// </summary>
-        IDependencyResolver RegisterInstance<TInterface>(TInterface instance, params Type[] interceptors)
+        IDependencyResolver RegisterInstance<TInterface>(TInterface instance, string name = null, params Type[] interceptors)
             where TInterface : class;
 
         /// <summary>
         /// Registers the instance for given type.
         /// </summary>
-        IDependencyResolver RegisterInstance(Type type, object instance, params Type[] interceptors);
+        IDependencyResolver RegisterInstance(Type type, object instance, string name = null, params Type[] interceptors);
 
         //TODO : Update documantation for interceptors parameter for both Register methods
         /// <summary>
         /// Registers the given <typeparam name="TService"></typeparam> for the type <typeparam name="TInterface"></typeparam> with the given instance mode.
         /// </summary>
-         IDependencyResolver Register<TInterface, TService>(InstanceMode mode = InstanceMode.Transient, params Type[] interceptors) where TService : TInterface;
+        IDependencyResolver Register<TInterface, TService>(InstanceMode mode = InstanceMode.Transient, string name = null, params Type[] interceptors) where TService : TInterface;
 
         /// <summary>
         /// Registers the given <typeparam name="serviceType"></typeparam> for the type <param name="interfaceType"></typeparam> with the given instance mode.
         /// </summary>
-        IDependencyResolver Register(Type interfaceType, Type serviceType, InstanceMode mode = InstanceMode.Transient, params Type[] interceptors);
+        IDependencyResolver Register(Type interfaceType, Type serviceType, InstanceMode mode = InstanceMode.Transient, string name = null, params Type[] interceptors);
 
         /// <summary>
         /// Resolves and injects properties and constructors if they are able.
@@ -56,7 +60,7 @@ namespace CodeFiction.Stack.Library.CoreContracts
         /// <param name="instance"></param>
         /// <returns></returns>
         IDependencyResolver TearDown(object instance);
-        
+
         /// <summary>
         /// Creates the instance of the given type and injects the constructor parameters.
         /// </summary>

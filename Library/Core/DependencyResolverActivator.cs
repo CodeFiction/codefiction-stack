@@ -8,7 +8,7 @@ namespace CodeFiction.Stack.Library.Core
     /// <summary>
     /// Activates the default Dependency Resolver.
     /// </summary>
-    public class DependencyResolver
+    public class DependencyResolverActivator
     {
         internal enum DependencyResolvers { Castle, Unity, Funq, NInject }
 

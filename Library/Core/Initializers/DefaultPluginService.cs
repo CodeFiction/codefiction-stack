@@ -11,7 +11,7 @@ namespace CodeFiction.Stack.Library.Core.Initializers
 
         public void Store(IEnumerable<Type> pluginTypes)
         {
-            foreach (IPlugin plugin in pluginTypes.Select(pluginType => DependencyResolver.Current.CreateInstanceOfType<IPlugin>(pluginType)))
+            foreach (IPlugin plugin in pluginTypes.Select(pluginType => DependencyResolverActivator.Current.CreateInstanceOfType<IPlugin>(pluginType)))
             {
                 _plugins[plugin.Name] = plugin;
             }

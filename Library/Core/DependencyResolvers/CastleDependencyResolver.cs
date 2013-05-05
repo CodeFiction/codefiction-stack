@@ -19,25 +19,28 @@ namespace CodeFiction.Stack.Library.Core.DependencyResolvers
             return this;
         }
 
-        public IDependencyResolver RegisterInstance<TInterface>(TInterface instance, params Type[] interceptors)
+        public IDependencyResolver RegisterInstance<TInterface>(TInterface instance, string name = null, params Type[] interceptors)
             where TInterface : class
         {
-            return RegisterInstance(typeof(TInterface), instance, interceptors);
+            return RegisterInstance(typeof (TInterface), instance, name, interceptors);
         }
 
-        public IDependencyResolver RegisterInstance(Type type, object instance, params Type[] interceptors)
+        public IDependencyResolver RegisterInstance(Type type, object instance, string name = null, params Type[] interceptors)
         {
-            _container.Register(Component.For(type).Instance(instance).Interceptors(interceptors));
+            _container.Register(interceptors.IsNullOrEmpty()
+                                    ? Component.For(type).Instance(instance).Named(name)
+                                    : Component.For(type).Instance(instance).Named(name).Interceptors(interceptors));
+
             return this;
         }
 
-        public IDependencyResolver Register<TInterface, TService>(InstanceMode mode = InstanceMode.Transient, params Type[] interceptors) 
+        public IDependencyResolver Register<TInterface, TService>(InstanceMode mode = InstanceMode.Transient, string name = null, params Type[] interceptors) 
             where TService : TInterface
         {
-            return Register(typeof(TInterface), typeof(TService), mode, interceptors);
+            return Register(typeof (TInterface), typeof (TService), mode, name, interceptors);
         }
 
-        public IDependencyResolver Register(Type interfaceType, Type serviceType, InstanceMode mode = InstanceMode.Transient, params Type[] interceptors)
+        public IDependencyResolver Register(Type interfaceType, Type serviceType, InstanceMode mode = InstanceMode.Transient, string name = null, params Type[] interceptors)
         {
             var componentRegistration = Component.For(interfaceType).ImplementedBy(serviceType);
 
@@ -59,7 +62,7 @@ namespace CodeFiction.Stack.Library.Core.DependencyResolvers
                 componentRegistration.Interceptors(interceptors);
             }
 
-            _container.Register(componentRegistration);
+            _container.Register(componentRegistration.Named(name));
             return this;
         }
 

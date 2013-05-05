@@ -61,7 +61,7 @@
     <Compile Include="Exceptions\InvalidInterceptorException.cs" />
     <Compile Include="Initializers\Bootstrapper.cs" />
     <Compile Include="DependencyResolvers\CastleDependencyResolver.cs" />
-    <Compile Include="DependencyResolver.cs" />
+    <Compile Include="DependencyResolverActivator.cs" />
     <Compile Include="Exceptions\DependencyInjectionContainerNotDefinedException.cs" />
     <Compile Include="Extensions\AssertExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />

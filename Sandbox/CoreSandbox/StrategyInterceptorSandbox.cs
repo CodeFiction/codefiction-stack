@@ -16,7 +16,7 @@ namespace CodeFiction.Stack.Sandbox.CoreSandbox
         public void StrategyInterceptorTest()
         {
             Library.Core.Initializers.Bootstrapper.Create()
-                    .RegisterComponent(resolver => resolver.Register<ITestService, TestService>(InstanceMode.Transient,typeof(StrategyInterceptor)))
+                    .RegisterComponent(resolver => resolver.Register<ITestService, TestService>(InstanceMode.Transient,null,typeof(StrategyInterceptor)))
                     .StartApplication(AssemblyLoader.AllLoader);
         }
     }

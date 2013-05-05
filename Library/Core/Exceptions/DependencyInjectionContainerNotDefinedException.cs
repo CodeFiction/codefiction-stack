@@ -13,7 +13,7 @@ namespace CodeFiction.Stack.Library.Core.Exceptions
         {
         }
 
-        internal DependencyInjectionContainerNotDefinedException(DependencyResolver.DependencyResolvers resolver)
+        internal DependencyInjectionContainerNotDefinedException(DependencyResolverActivator.DependencyResolvers resolver)
             //TODO: implement base behavior after base exception is created.
         {
             
